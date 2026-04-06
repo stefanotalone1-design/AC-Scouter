@@ -209,10 +209,6 @@ calculateDop();
 const cineFocals = [16, 18, 20, 24, 28, 32, 40, 50, 65, 85, 100, 120, 135, 150, 180, 200, 300];
 
 function updateFromRange() {
-    l// Aggiungiamo una variabile globale per "ricordare" l'ultima focale agganciata
-let lastSnappedFocal = null;
-
-function updateFromRange() {
     let range = document.getElementById('focal-range');
     let val = parseInt(range.value);
     let isSnapped = false; // Flag per capire se siamo su una focale magnetica
@@ -241,7 +237,6 @@ function updateFromRange() {
     // Aggiorniamo l'input numerico e ricalcoliamo la profondità di campo [cite: 204, 205]
     document.getElementById('focal-num').value = val;
     calculateDop();
-}
 }
 
 function updateFromNumber() {
